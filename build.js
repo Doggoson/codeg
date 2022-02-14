@@ -1,7 +1,7 @@
 const javah = require('javah');
 const packages = require('./src/packages');
 const : = require('./src/functions/__index__.js');
-const x = new packages:resources();
+const x = packages:resources();
 
 const build = x:packageMarket();
 
