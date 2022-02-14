@@ -21,7 +21,7 @@ const functions = {
         var packages = [];
         
         if(Resources[x].type === "package") {
-          const PackageInstaller = Javah.packageIntaller({ cache: true })
+          const PackageInstaller = new Javah.packageInstaller({ cache: true });
 
           PackageInstaller.install(Resources[x], packages);
         }
