@@ -1,7 +1,7 @@
 const functions = {
- *//
+ /**
  @param { Javah } javah
- /*
+ */
  queue:(name, key) => {
 
    (!name || !key) ? (return) : null;
