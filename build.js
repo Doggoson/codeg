@@ -9,10 +9,11 @@ for(x2 = 0; x2 < packages.total(); x2++) {
 
 *//
  @Module { javah } @Javah
- @Javah { for } { i=index.create(x), __newindex=x[i] }
+ @Javah { for } { i=index.create(x), __packages.package=x[i] }
+ @PackageOptimizer { package }
 /*
 
-x:put("build", packages[x2]);
+x:queue("build", packages[x2]);
 
 }
 
