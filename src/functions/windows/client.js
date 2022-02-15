@@ -1,7 +1,7 @@
 const UI = require('@GithubLibraries/UI');
 const Expressified = require('@GithubLibraries/Expressified')({ routes: require("../routes") });
 
-if(!UI) return Expressified.route("client", "UI failed to load.");
+if(!UI) return Expressified.routes.post("client", "UI failed to load.");
 const Window = new UILibrary.window({ resolution: this.aspect.fit });
 
 const Dashboard = new Window.items()
