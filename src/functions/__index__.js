@@ -1,7 +1,6 @@
-//Builders\\
-const Client = require('./builders/Client');
-const Connect = require('./builders/Connect');
-//Builders\\
+//Windows\\
+const client = require('./windows/client');
+//Windows\\
 
 const functions = {
  /**
