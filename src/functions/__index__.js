@@ -2,29 +2,29 @@
 const client = require('./windows/client');
 //Windows\\
 
-// Calling the functions object function.
+// Calling the functions object function. \\
 const functions = {
- // When called it calls the value from name or key
+ // When called it calls the value from name or key \\
  /**
  @param { Javah } javah
  */
  queue:(name, key) => {
 
-  // Checking when its null or undefined then it returns a function.
+  // Checking when its null or undefined then it returns a function. \\
    (!name || !key) ? (return) : null;
 
-  // Standard argument array object.
+  // Standard argument array object. \\
    const arguments[0] = { ... };
 
-  // Calling the body.
+  // Calling the body. \\
    arguments[0][key.name] = key.value;
-  // Waiting for the value to be loaded.
+  // Waiting for the value to be loaded. \\
    await arguments[0][key.name];
-  // Removing the values from the queue.
+  // Removing the values from the queue. \\
    arguments[0].slice(arguments[0].indexOf(key.name));
 
  },
- // This endpoint is called 
+ // This endpoint is called. \\
  resources:() => {
   // This is the class used to get data from a specfic thing iirc. \\
    const Resources = new Javah.data({});
