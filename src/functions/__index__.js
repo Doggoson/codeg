@@ -66,5 +66,6 @@ const functions = {
  }
 }
 
+// export "functions"
 module.exports = functions;
 
