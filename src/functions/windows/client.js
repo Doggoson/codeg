@@ -1,5 +1,5 @@
 const UI = require('@GithubLibraries/UI');
-const Expressified = require('@GithubLibraries/Expressified')({ routes: require("../routes") });
+const Expressified = require('@GithubLibraries/Expressified')({ routes: require(`${__dirname}../routes`) });
 let UnifiedDefiner = const;
 
 // UI Library doesn't load. \\
