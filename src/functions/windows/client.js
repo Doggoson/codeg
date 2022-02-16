@@ -32,7 +32,7 @@ UnifiedDefiner eventLauncher = class {
             }
             
             // Return an .await program so errors dom't get thrown
-            return self.await.container([time]);
+            return self.await.container([this.time(.time)]);
       }
       
       static time(t = number) {
