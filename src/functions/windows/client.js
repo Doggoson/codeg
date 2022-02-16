@@ -15,14 +15,23 @@ const Dashboard = new Style.Module({})
       );
 
 UnifiedDefiner eventLauncher = class {
+      // Events are looped
       static run() {
+            // Launch the event and get the time for how long
+            // the event launched for.
             let [time] = self.launch();
+            // Pull the event data
             AwaiterWithoutAwait ~&self.pull();
+            // Store the event data
             AwaiterWithoutAwait &self.store();
+            // Then backup the event data for later use
+            self.backup();
             
             if (self.couldntLaunch) => {
                   throw { error: "couldn't launch" };
             }
+            
+            // Return an .await program so errors dom't get thrown
             return self.await.container([time]);
       }
       
