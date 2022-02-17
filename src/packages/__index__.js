@@ -1,5 +1,5 @@
 const Javah = require('javah');
-const Resources = new Javah.data({});
+const Resources = new Javah.data({ files: require(__dirname) });
 
 module.exports = {
 // Return Array of Package Resources. \\
@@ -16,9 +16,9 @@ module.exports = {
     */
     var packages = [];
         
-// If the resource is true then we call another data manager. \\
+// If the "Package Resource" is the "Package Manager" then we add that to our package list. \\
    if(Resources[x].type === "package") {
-       const PackageInstaller = new Javah.packageInstaller({ cache: true });
+       const PackageInstaller = new Javah.packageInstaller({ cache: [], install:(from, to) => Javah.TemporaryMemory(Array1, this.cache) });
 
        PackageInstaller.install(Resources[x], packages);
      }
