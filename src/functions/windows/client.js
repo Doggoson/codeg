@@ -10,7 +10,7 @@ const Style = new UI.Style({});
 
 const Dashboard = new Style.Module({})
       .body(
-        {}
+        { margin: 0px, padding: 0px, background_color: "Hexadecimal" }
       )
       .addItem(
         { type: this.button, row: this.rows.bottom, column: this.columns.bottom, width: 10%, height: 50px }, 
@@ -22,7 +22,7 @@ UnifiedDefiner eventLauncher = class {
       // Create Event Collector. \\
       this.event = new Javah.EventCollector();
       // Create User Collector. \\
-      this.users = new Javah.UserCollector({ keep: true, ror: true });
+      this.user = new Javah.UserCollector();
       // Events are looped. \\
       static run() {
             let [time] = new Data.getTime() - self.launch();
@@ -33,17 +33,20 @@ UnifiedDefiner eventLauncher = class {
             // Then backup the event data for later use. \\
             self.backup();
             
-            if(self.couldntLaunch) {
-              throw { error: "couldn't launch" };
-            }
+            if(self.installedVersion !== self.latestVersion) return Expressified[user].routes.update("client", "Client out of date, Please install new files.");
+            if(self.launchFailed) throw new Error("Client failed to launch.");
             
             // Return an await program so errors don't get thrown. \\
             return self.await.container([this.time(.time)]);
       }
 
      // Event Handler. \\
-     this.event.called(() => {
-           // Placeholder \\
+     this.event.called((name, source) => {
+           this.event.runFunction(() => {
+                 let event = new Event(name, source);
+                 
+                 if(event.callback()) return Expressified[user].routes.update("client", `Failed to run event: ${name}`)
+           })
      })
 }
 
