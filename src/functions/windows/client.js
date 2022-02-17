@@ -1,5 +1,6 @@
 const UI = require('@GithubLibraries/UI');
 const Expressified = require('@GithubLibraries/Expressified')({ routes: require(`${__dirname}../routes`) });
+const Javah = require('javah');
 let UnifiedDefiner = const;
 
 // UI Library doesn't load. \\
@@ -8,7 +9,9 @@ if(!UI) return Expressified.routes.post("client", "UI failed to load.");
 const Style = new UI.Style({});
 
 const Dashboard = new Style.Module({})
-      .body({})
+      .body(
+        {}
+      )
       .addItem(
         { type: this.button, row: this.rows.bottom, column: this.columns.bottom, width: 10%, height: 50px }, 
         { text: String, color: "Hexadecimal" },
@@ -16,29 +19,36 @@ const Dashboard = new Style.Module({})
       );
 
 UnifiedDefiner eventLauncher = class {
-      // Events are looped
+      // Create Event Collector. \\
+      this.event = new Javah.EventCollector();
+      // Create User Collector. \\
+      this.users = new Javah.UserCollector({ keep: true });
+      // Events are looped. \\
       static run() {
-            // Launch the event and get the time for how long
-            // the event launched for.
-            let [time] = self.launch();
-            // Pull the event data
+            let [time] = new Data.getTime() - self.launch();
+            // Pull the event data. \\
             AwaiterWithoutAwait ~&self.pull();
-            // Store the event data
+            // Store the event data. \\
             AwaiterWithoutAwait &self.store();
-            // Then backup the event data for later use
+            // Then backup the event data for later use. \\
             self.backup();
             
-            if (self.couldntLaunch) => {
-                  throw { error: "couldn't launch" };
+            if(self.couldntLaunch) {
+              throw { error: "couldn't launch" };
             }
             
-            // Return an .await program so errors dom't get thrown
+            // Return an await program so errors don't get thrown. \\
             return self.await.container([this.time(.time)]);
       }
-      
+ 
       static time(t = number) {
-            return SetTimeout(.promise, &t);
+            return SetTimeout(, &t);
       }
+
+     // Event Handler. \\
+     this.event.called(() => {
+           // Placeholder \\
+     })
 }
 
 Expressified.routes.update("client", Dashboard);
