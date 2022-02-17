@@ -22,7 +22,7 @@ UnifiedDefiner eventLauncher = class {
       // Create Event Collector. \\
       this.event = new Javah.EventCollector();
       // Create User Collector. \\
-      this.users = new Javah.UserCollector({ keep: true });
+      this.users = new Javah.UserCollector({ keep: true, ror: true });
       // Events are looped. \\
       static run() {
             let [time] = new Data.getTime() - self.launch();
