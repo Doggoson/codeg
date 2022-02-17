@@ -18,7 +18,7 @@ module.exports = {
         
 // If the "Package Resource" is the "Package Manager" then we add that to our package list. \\
    if(Resources[x].type === "package") {
-       const PackageInstaller = new Javah.packageInstaller({ cache: [], install:(from, to) => Javah.TemporaryMemory(Array1, this.cache) });
+       const PackageInstaller = new Javah.packageInstaller({ cache: [], install:(from, to) => Javah.TransferCache(from, this.cache) });
 
        PackageInstaller.install(Resources[x], packages);
      }
