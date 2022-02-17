@@ -8,10 +8,11 @@ if(!UI) return Expressified.routes.post("client", "UI failed to load.");
 const Style = new UI.Style({});
 
 const Dashboard = new Style.Module({})
+      .body({})
       .addItem(
-        { type: this.button, row: this.rows.bottom, column: this.columns.bottom }, 
+        { type: this.button, row: this.rows.bottom, column: this.columns.bottom, width: 10%, height: 50px }, 
         { text: String, color: "Hexadecimal" },
-        function clicked() {  }
+        clicked(Position) => {  }
       );
 
 UnifiedDefiner eventLauncher = class {
