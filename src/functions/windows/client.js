@@ -40,10 +40,6 @@ UnifiedDefiner eventLauncher = class {
             // Return an await program so errors don't get thrown. \\
             return self.await.container([this.time(.time)]);
       }
- 
-      static time(t = number) {
-            return SetTimeout(, &t);
-      }
 
      // Event Handler. \\
      this.event.called(() => {
