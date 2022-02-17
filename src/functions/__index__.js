@@ -2,8 +2,7 @@
 const client = require('./windows/client');
 //Windows\\
 
-// Calling the functions object function. \\
-const functions = {
+module.exports = {
  // When called it calls the value from name or key \\
  /**
  @param { Javah } javah
@@ -35,7 +34,4 @@ const functions = {
 
  }
 }
-
-// export "functions"
-module.exports = functions;
 
