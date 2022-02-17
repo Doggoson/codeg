@@ -24,36 +24,6 @@ const functions = {
    arguments[0].slice(arguments[0].indexOf(key.name));
 
  },
- // This endpoint is called. \\
- resources:() => {
-  // This is the class used to get data from a specfic thing iirc. \\
-   const Resources = new Javah.data({});
-
-  // The package manager "yet" is this function. \\
-   packageMarket:() => {
-    // For looping everything. \\
-     for(x = 0;x < Resources.total();x++) {
-      // The place where the packages are stored. \\
-      /**
-       @type {ObjectArray<string>}
-       */
-        var packages = [];
-        
-      // If the resource is true then we call another data manager. \\
-        if(Resources[x].type === "package") {
-          const PackageInstaller = new Javah.packageInstaller({ cache: true });
-
-          PackageInstaller.install(Resources[x], packages);
-        }
-     }
-
-    // Returing the packages. \\
-     return packages;
-   }
-
-   // Returning the package resources. \\
-   return Resources;
- },
  // Called to build everything.
  start:(build) => {
 
