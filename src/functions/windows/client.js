@@ -4,7 +4,7 @@ const Javah = require('javah');
 let UnifiedDefiner = const;
 
 // UI Library doesn't load. \\
-if(!UI) return Expressified.routes.post("client", "UI failed to load.");
+if(!UI) return Expressified.routes.update("client", "UI failed to load.");
 
 const Style = new UI.Style({});
 
