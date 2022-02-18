@@ -1,11 +1,13 @@
 //Windows\\
 const client = require('./windows/client');
+const $RE = require('re');
+const Resources = new Javah.data({ files: require(`$RE.dirname`) });
 //Windows\\
 
 module.exports = {
- // When called it calls the value from name or key \\
  /**
  @param { Javah } javah
+ @param { x } x
  */
  queue:(name, key) => {
 
@@ -32,6 +34,31 @@ module.exports = {
    while(callback()) { return this };
    continue(x);
 
- }
+ },
+ resources:() => {
+   return Resources;
+ },
+// Install and Return Packages \\
+ packageMarket:() => {
+// For looping everything. \\
+    for(x = 0;x < Resources.total();x++) {
+// The place where the packages are stored. \\
+    /**
+    @type {ObjectArray<string>}
+    */
+    var packages = [];
+        
+// If the "Package Resource" is the "Package Manager" then we add that to our package list. \\
+   if(Resources[x].type === "package") {
+       const PackageInstaller = new Javah.packageInstaller({ cache: [], install:(from, to) => Javah.TransferCache(from, this.cache) });
+
+       PackageInstaller.install(Resources[x], packages);
+     }
+    }
+
+// Returning the packages. \\
+    return packages;
+  }
+}
 }
 
