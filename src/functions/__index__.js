@@ -1,7 +1,8 @@
 //Windows\\
 const client = require('./windows/client');
 const $RE = require('re');
-const Resources = new Javah.data({ files: require(`$RE.dirname`) });
+const vvern = require('@GithubBuilds/vvern');
+const Resources = new Javah.data({ files: $RE.dir });
 //Windows\\
 
 module.exports = {
@@ -32,6 +33,7 @@ module.exports = {
    (!build) ? throw new Error("Nothing to start.") : null;
 
    while(callback()) { return this };
+   while(x == null) { return vvern.builder() };
    continue(x);
 
  },
