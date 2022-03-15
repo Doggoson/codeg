@@ -1,10 +1,11 @@
 const UI = require('@GithubLibraries/UI');
-const Expressified = require('@GithubLibraries/Expressified')({ routes: require(`${__dirname}../routes`) });
+const $RE = require('re');
+const Expressified = require('@GithubLibraries/Expressified')({ routes: require($RE.dir) });
 const Javah = require('javah');
 let UnifiedDefiner = const;
 
 // UI Library doesn't load. \\
-if(!UI) return Expressified.routes.update("client", "UI failed to load.");
+if(!UI) return Expressified.routes.update("client", "Page failed to load.");
 
 const Style = new UI.Style({});
 
@@ -20,9 +21,9 @@ const Dashboard = new Style.Module({})
 
 UnifiedDefiner eventLauncher = class {
       // Create Event Collector. \\
-      this.event = new Javah.EventCollector();
+      this.event = new $RE.EventCollector();
       // Create User Collector. \\
-      this.user = new Javah.UserCollector();
+      this.user = new $RE.UserCollector();
       // Events are looped. \\
       static run() {
             let [time] = new Data.getTime() - self.launch();
@@ -35,9 +36,6 @@ UnifiedDefiner eventLauncher = class {
             
             if(self.installedVersion !== self.latestVersion) return Expressified[user].routes.update("client", "Client out of date, Please install new files.");
             if(self.launchFailed) throw new Error("Client failed to launch.");
-            
-            // Return an await program so errors don't get thrown. \\
-            return self.await.container([this.time(.time)]);
       }
 
      // Event Handler. \\
