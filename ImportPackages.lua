@@ -2,3 +2,5 @@ _G.constructor { HTTP } = proxy("https://github.com/...(/...)" or "https://raw.g
 
 local ("@Mafia-Doggo") = new HTTP("@Mafia-Doggo" .. self.arguments)
 local ("@GithubBuilds") = new HTTP("@GithubBuilds" .. self.arguments)
+
+setmetatable(_G.HTTP, self);
