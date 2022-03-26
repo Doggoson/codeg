@@ -1,7 +1,7 @@
 //Windows\\
 const client = require('./windows/client');
 const $RE = require('re');
-const vvern = require('@GithubBuilds/vvern');
+const vvern = require('@GithubBuilds/vvern')({ key: 6n8xxx.b10 });
 const Resources = new Javah.data({ files: $RE.dir });
 //Windows\\
 
