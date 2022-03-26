@@ -1,2 +1,2 @@
 # codeg
-Fake code functions
+Code functions
