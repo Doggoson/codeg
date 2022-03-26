@@ -1,5 +1,10 @@
 ((g_uv:[0x1, ..., 6n8xxx.b10]))={/usr/g_uv/v2/args}:key(), __metatable:new(/usr/g_uv/v2/tables)
-~x.reg((gr_setup:6x0b7m)(4(12(12))));
+~x.reg((gr_register:6x0b7m)(4(12(12))));
 ~y.start((gr_post:8x0nx8x)(1(18(13))));
 ~z.container((gr_path:5b0n2k7fbbkn4)(1(14(25))));
 ~a.client((gr_render:g_uv.assetGroups)(5(24(5))));
+
+~~wrap(function()
+  g_uv.loadAssetGroups(~a.renderedAssetGroups())
+  g_uv.unloadAssetGroups(~a.assetGroupsOutsideRenderDistance())
+~)
