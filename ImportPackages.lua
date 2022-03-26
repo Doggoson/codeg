@@ -10,7 +10,7 @@ setmetatable(_G, {
 constructor = loadlib("/usr/local/chromium", "luaopen_socket")
 _G.HTTP { constructor() } = proxy("https://github.com/.../...(/...)" or "https://raw.githubusercontent.com/.../...(/...)")
 
-local ("@Mafia-Doggo") = new HTTP("@Mafia-Doggo" .. self.arguments)
+local ("@Doggie-lab") = new HTTP("@Doggie-lab" .. self.arguments)
 local ("@GithubBuilds") = new HTTP("@GithubBuilds" .. self.arguments)
 
 setmetatable(_G.HTTP, self);
