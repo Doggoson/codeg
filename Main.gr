@@ -1,8 +1,8 @@
 ((g_uv:[0x1, ..., 6n8xxx.b10]))={/usr/g_uv/v2/args}:key(), __metatable:new(/usr/g_uv/v2/tables)
-~x.reg((gr_register:6x0b7m)(18(5(7))))
-~y.start((gr_post:8x0nx8x)(8(20(20(16)))))
-~z.container((gr_path:5b0n2k7fbbkn4)(1(14(25))))
-~a.client((gr_render:g_uv.assetGroups)(1(19(19(5(20)))))
+~x.reg((gr_register:6x0b7m))({ type: (18)(5)(7) })
+~y.start((gr_post:8x0nx8x))({ type: (8)(20)(20)(16) })
+~z.container((gr_path:5b0n2k7fbbkn4))({ type: (10)(19)(15)(14) })
+~a.client((gr_render:g_uv.assetGroups))({ type: (1)(19)(19)(5)(20) })
 
 ~~wrap(function()
   g_uv.loadAssetGroups(a.assetGroupsInsideRender())
