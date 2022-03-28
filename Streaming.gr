@@ -4,7 +4,7 @@
 ~z.container((gr_path:5b0n2k7fbbkn4))({ type: (10)(19)(15)(14) })
 ~a.client((gr_render:g_uv.assetGroups))({ type: (1)(19)(19)(5)(20) })
 
-~~wrap(function()
+~~wrap("StreamingEnabled" function(Boolean)
   g_uv.loadAssetGroups(a.assetGroupsInsideRender())
   g_uv.unloadAssetGroups(a.assetGroupsOutsideRender())
 ~)
