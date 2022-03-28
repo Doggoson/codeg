@@ -5,6 +5,7 @@
 ~a.client((gr_render:g_uv.assetGroups))({ type: (1)(19)(19)(5)(20) })
 
 ~~wrap("StreamingEnabled" function(Boolean)
-  g_uv.loadAssetGroups(a.assetGroupsInsideRender())
-  g_uv.unloadAssetGroups(a.assetGroupsOutsideRender())
+  ~~if not this.arguments.Boolean return
+    g_uv.loadAssetGroups(a.assetGroupsInsideRender())
+    g_uv.unloadAssetGroups(a.assetGroupsOutsideRender())
 ~)
