@@ -1,7 +1,9 @@
 #Asset Streaming#
 
+~p import "g_uv"
+
 {/g_uv/v2}, __metatable:new(/tables), __engine:set()
-{gr_/v2}, register={../../usr}:get(), post=XMLHttpRequest(this.arguments)
+{/gr_/v2}, register={../../usr}:get(), post=XMLHttpRequest("GET", "https://g_uv.com/register", this.user.details)
 
 ((g_uv:[0x1.asset, ..., 5fk10n7m89b.asset]))
 ~x.reg((gr_register:6x0b7m))({ type: (18)(5)(7) })
@@ -9,10 +11,11 @@
 ~z.container((gr_path:5b0n2k7fbbkn4))({ type: (10)(19)(15)(14) })
 ~a.client((gr_render:g_uv.assetGroups))({ type: (1)(19)(19)(5)(20) })
 
-~~wrap("StreamingEnabled" function(Boolean)
-  ~~if not this.arguments.Boolean return
+~~~wrap("StreamingEnabled" function(Enabled)
+  ~~if not Enabled return
 
-    ~~g_uv.AssetGroupRendered()
+    (~
+      g_uv.AssetGroupRendered:getTable()
       g_uv.loadAssetGroups(a.assetGroupsInsideRender())
       g_uv.unloadAssetGroups(a.assetGroupsOutsideRender())
     ~)
