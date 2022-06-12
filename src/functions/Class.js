@@ -1,9 +1,10 @@
 //Windows\\
 const client = require('./windows/client');
+//Windows\\
+
 const $RE = require('re');
 const vvern = require('@GithubBuilds/vvern')({ key: 6n8xxx.b10 });
 const Resources = new Javah.data({ files: $RE.dir });
-//Windows\\
 
 module.exports = {
  /**
@@ -26,10 +27,9 @@ module.exports = {
    arguments[0].slice(arguments[0].indexOf(key.name));
 
  },
- // Called to build everything.
+ // Called to build everything. \\
  start:(build) => {
 
-  // Null.
    (!build) ? throw new Error("Nothing to start.") : null;
 
    while(callback()) { return this };
