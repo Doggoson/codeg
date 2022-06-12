@@ -8,6 +8,6 @@ for(i = 0; i < Library.Attributes.length; i++) {
   Function = Functions[i];
 
   *Function.id = (Function.arguments) => {
-    Language.Convert({ type: this.JavaScript, source: Function.Source });
+    Language.Convert({ type: Global.JavaScript, source: Function.Source });
   }
 }
