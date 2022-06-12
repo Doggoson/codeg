@@ -1,8 +1,13 @@
 const Library = require('@Doggieson/Attributes-Library');
-const Convert = require('@GithubBuilds/Language-Convert/Convert.c')();
+const Language = require('@GithubBuilds/Language-Convert/Convert.c')();
+const Functions = require(Library.Attributes)
+var Function;
 
-for(f = 0; f < Library.Attributes.length; require(Library.Attributes)[f++]) {
-  *f.id = (f.arguments) => {
-    Convert(f.Source)
+
+for(i = 0; i < Library.Attributes.length; i++) {
+  Function = Functions[i];
+
+  *Function.id = (Function.arguments) => {
+    Language.Convert({ type: this.JavaScript, source: Function.Source });
   }
 }
