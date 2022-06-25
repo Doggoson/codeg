@@ -2,7 +2,7 @@
 
 class Player {
   public:
-    boolean Playing;
+    bool Playing;
     int* ptr VideoCode;
     int CaptionsIndex;
     int CurrentTime;
