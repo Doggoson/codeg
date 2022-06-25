@@ -5,7 +5,7 @@
 
 class VideoPlayer {
   public:
-    array Buffer;
+    arr Buffer;
     bool Canary; <default=false>
     bool CaptionsAvaliable;
     bool Playing; <default=true>
