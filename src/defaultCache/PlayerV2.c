@@ -31,5 +31,5 @@ VideoPlayer.Playing::Watch(function(ov, nv) {
 });
 
 Streaming.Body::Added(function() {
-  Streaming.VideoPlayerOutline = "videoplayer://Outline.videoplayer/Watch?c=%VideoCode%"
+  Streaming.VideoPlayerOutline = "videoplayer://Outline.vidp/Watch?c=%VideoCode%"
 });
