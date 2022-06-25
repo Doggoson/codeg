@@ -1,0 +1,20 @@
+// Version 1.0 \\
+
+#!IOExceptions.c
+#!AttemptFix.bf
+#!CDev.js
+#!MyIP.js
+#!Cloudfare.js { using: *MyIP, ... }
+#!Parser.io ["Body", "Cookie"]
+#!Timer.io (&0x7b27n8 / 60)
+#!Vidp.io [ Parser ]
+#!YoutubePlayer.io { Advertisements: [*___#>>], AdTimer: *Timer }
+
+// Advertisements \\
+#Adify.io, Spotify.io, VidpBannerAds.io
+
+while( IOExceptions.Application ) {
+  CDev.send(IOExceptions.Application, IOException);
+  AttemptFix.createThread(IOExceptions.Application);
+};
+
