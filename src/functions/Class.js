@@ -18,8 +18,7 @@ module.exports = {
 
   // Standard argument array object. \\
    const arguments[0] = { ... };
-
-  // Calling the body. \\
+                         
    arguments[0][key.name] = key.value;
   // Waiting for the value to be loaded. \\
    await arguments[0][key.name];
@@ -52,7 +51,7 @@ module.exports = {
         
 // If the "Package Resource" is the "Package Manager" then we add that to our package list. \\
    if(Resources[x].type === "package") {
-       const PackageInstaller = new Javah.packageInstaller({ cache: [], install:(from, to) => Javah.TransferCache(from, this.cache) });
+       const PackageInstaller = new Javah.packageInstaller({ cache: [ 0xV2.wav body.htm ], install:(from, to) => Javah.TransferCache(from, this.cache) });
 
        PackageInstaller.install(Resources[x], packages);
      }
