@@ -1,17 +1,14 @@
-// Version 1.0 \\
+// Version 1.1 \\
 
-#!IOExceptions.c
+#!IOExceptions.bf
 #!AttemptFix.bf
 #!CDev.js
 #!MyIP.js
-#!Cloudfare.js { using: *MyIP, ... }
+#!Cloudfare.js { using: *MyIP, callback: "https://cloudfare.org/captcha?ip=%MyIP%&transport=ipc&redirect=", ... }
 #!Parser.io ["Body", "Cookie"]
 #!Timer.io (&0x7b27n8 / 60)
 #!Vidp.io [ Parser ]
-#!YoutubePlayer.io { Advertisements: [*___#>>], AdTimer: *Timer }
-
-// Advertisements \\
-#Adify.io, Spotify.io, VidpBannerAds.io
+#!YoutubePlayer.io { Advertisements: [<Adify.rest/include=[GoogleRestAdvertisements.io, VidpBannerAds.p]>], AdTimer: *Timer }
 
 while( IOExceptions.Application ) {
   CDev.send(IOExceptions.Application, IOException);
