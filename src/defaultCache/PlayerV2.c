@@ -1,6 +1,7 @@
 #import <Streaming.gr>
+#import <Contencate.io>
 
-// Version 2.21 \\
+// Version 2.7 \\
 
 class VideoPlayer {
   public:
@@ -17,7 +18,7 @@ class VideoPlayer {
     string* ptr DeviceState;
 };
 
-while(VideoPlayer.Buffer::GetSize()::Contencate() > 0x67) {
+while(VideoPlayer.Buffer::GetSize() #Contencate > 0x67) {
   Streaming.Body::BufferVideo();
 }
 
