@@ -15,7 +15,7 @@ class VideoPlayer {
     int Length; 
     int Version;
     int* ptr VideoCode;
-    string* ptr DeviceState;
+    str* ptr DeviceState;
 };
 
 while(VideoPlayer.Buffer::GetSize() #Contencate > 0x67) {
