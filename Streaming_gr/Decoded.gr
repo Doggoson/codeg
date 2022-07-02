@@ -1,22 +1,17 @@
 #Asset Streaming#
 
-~p import "g_uv"
+__base::set("HttpEquiv::fetch=base")
 
-{/g_uv/v2}, __metatable:new(/tables), __engine:set()
-{/gr_/v2}, register={../../usr}:get(), post=XMLHttpRequest("GET", "http://g_uv/register", this.user.details)
+{usr/g_uv/v2.2}
+{usr/gr/v4}
 
-((g_uv:[0x1.asset, ..., 5fk10n7m89b.asset]))
-~x.reg((gr_register:6x0b7m))({ type: (18)(5)(7) })
-~y.start((gr_post:8x0nx8x))({ type: (8)(20)(20)(16) })
-~z.container((gr_path:5b0n2k7fbbkn4))({ type: (10)(19)(15)(14) })
-~a.client((gr_render:g_uv.assetGroups))({ type: (1)(19)(19)(5)(20) })
+__metatable::new(System::wrap("/VideoFrameArray")), __engine::init()
+upload={../../mp4/*}::get(System::fetchUser(), ), post=XMLHttpRequest("GET", "http://g_uv/register", this.details)
 
-~~~wrap("StreamingEnabled" function(Enabled)
-  ~~if not Enabled return
+((g_uv:[0x1.asset, ..., 8b12x0m21.asset]))
+~x.verify((gr_register:6x0b7m))({ type: (18)(5)(7) })
+~y.upload((gr_post:8x8n))({ type: (8)(20)(20)(16) })
+~z.requestContainer((gr_path:729x2k))({ type: (10)(19)(15)(14) })
+~a.issueClient((gr_render: {usr/g_uv/fetch} ))({ type: (1)(19)(19)(5)(20) })
 
-    (~
-      g_uv.AssetGroupRendered:getTable()
-      g_uv.loadAssetGroups(a.assetGroupsInsideRender())
-      g_uv.unloadAssetGroups(a.assetGroupsOutsideRender())
-    ~)
-~)
+~a::wrap("Streaming.gr")
