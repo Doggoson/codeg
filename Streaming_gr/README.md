@@ -5,4 +5,4 @@
 
 > Buffering videos. **( ::BufferVideo() )**
 
-> Changing the video outline. ( Default is YoutubePlayerAPI )
+> Changing the video outline. **( Default is YoutubePlayerAPI )**
