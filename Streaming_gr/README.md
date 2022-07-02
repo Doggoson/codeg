@@ -1,6 +1,6 @@
 # Streaming.gr
 > Service used for Video Playback
-# USES
+# Uses
 > Playing back videos. **( ::Transport(Event, Args) )**
 
 > Buffering videos. **( ::BufferVideo() )**
