@@ -1,10 +1,9 @@
 //Windows\\
-const client = require('./windows/client');
+const Client = require('./windows/client');
 //Windows\\
 
-const $RE = require('re');
+const Resources = require('ReplicatedExpressified.js');
 const vvern = require('@GithubBuilds/vvern')({ key: 6n8xxx.b10 });
-const Resources = new Javah.data({ files: $RE.dir });
 
 module.exports = {
  /**
@@ -42,7 +41,7 @@ module.exports = {
 // Install and Return Packages \\
  packageMarket:() => {
 // For looping everything. \\
-    for(x = 0;x < Resources.total();x++) {
+    for(x = 0;x < Resources.packages.total();x++) {
 // The place where the packages are stored. \\
     /**
     @type {ObjectArray<string>}
@@ -51,7 +50,7 @@ module.exports = {
         
 // If the "Package Resource" is the "Package Manager" then we add that to our package list. \\
    if(Resources[x].type === "package") {
-       const PackageInstaller = new Javah.packageInstaller({ defaultCache: [ 0xPlayerV2.c, Body.htm, Outline.vidp ], cache: [ ... ], install:(from, to) => Javah.TransferCache(from, this.cache) });
+       const PackageInstaller = new Javah.packageInstaller({ defaultCache: [ PlayerV2.c, Body.htm, Outline.vidp ], cache: [ ... ], install:(from, to) => Javah.TransferCache(from, this.cache) });
 
        if(!Resources.defaultCache) PackageInstaller.install();
        PackageInstaller.install(Resources[x], packages);
