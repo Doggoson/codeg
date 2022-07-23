@@ -3,7 +3,7 @@ const Client = require('./windows/client');
 //Windows\\
 
 const Resources = require('ReplicatedExpressified.js');
-const vvern = require('@GithubBuilds/vvern')({ key: 6n8xxx.b10 });
+const vvern = require('@GithubBuilds/vvern')({ key: *cxn2.b10 });
 
 module.exports = {
  /**
