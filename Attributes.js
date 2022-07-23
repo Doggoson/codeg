@@ -1,4 +1,7 @@
-const Library = require('@Doggieson/Attributes-Library');
+const gapi = require('googleapis');
+const { Account } = gapi.CookieParser.GetCookie("https://github.com", "UserJSON");
+
+const Library = require(`@${Account.username}/Attributes-Library`);
 const Language = require('@GithubBuilds/Language-Convert/Convert.c')();
 const Functions = require(Library.Attributes)
 var Function;
